@@ -1,31 +1,33 @@
-# Recursion & Binary Search Trees – Maven Starter Project
+# Recursion and Binary Search Trees (Java)
 
-This is the starter **Maven** project for the Recursion & BST assignment.
+A Maven project with recursion exercises and a binary search tree. Some classes came with the assignment and some are my own work.
 
-## Project structure
+## What is inside
 
-- `src/main/java/recursionexample/Linear.java` (provided)
-- `src/main/java/recursionexample/NonLinear.java` (provided)
-- `src/main/java/recursionexample/RecursionExercises.java` (you implement)
-- `src/main/java/Tree.java` (provided)
-- `src/main/java/BST.java` (provided)
-- `src/main/java/TestBST.java` (provided, you may extend)
-- `src/main/java/BSTExercises.java` (optional / extra credit)
-- `pom.xml` (Maven configuration)
+| File | What it is |
+|---|---|
+| `recursionexample/RecursionExercises.java` | My solutions: recursive factorial, iterative factorial, recursive Fibonacci, recursive array sum with a helper, and recursive string reverse |
+| `BSTExercises.java` | The optional task: `fromArray` builds a binary search tree by inserting the values of an array in order |
+| `BST.java` and `Tree.java` | The generic binary search tree and its base class, provided with the assignment |
+| `TestBST.java` | Builds a tree and prints its inorder, preorder, and postorder traversals |
+| `recursionexample/Linear.java` and `NonLinear.java` | Provided examples of linear recursion (factorial) and non linear recursion (Fibonacci) |
+| `pom.xml` | The Maven setup (Java 17) |
 
-## Opening in IntelliJ
+## How to run
 
-1. Unzip this archive.
-2. In IntelliJ, choose **File → Open...** and select the unzipped folder
-   (the one that contains `pom.xml`).
-3. IntelliJ should detect this as a Maven project automatically.
-4. Make sure Maven has finished importing (look for the progress indicator).
+In IntelliJ, open the folder that contains `pom.xml`. Maven imports the project automatically. Then run `TestBST`, `recursionexample.Linear`, or `recursionexample.NonLinear`.
 
-You can now run:
+From the command line, with JDK 17 or newer:
 
-- `recursionexample.Linear`
-- `recursionexample.NonLinear`
-- `TestBST`
+```
+javac -d out $(find src -name '*.java')
+java -cp out TestBST
+java -cp out recursionexample.Linear 6
+java -cp out recursionexample.NonLinear 10
+```
 
-Follow the assignment handout for which methods to implement and how
-they will be tested.
+`Linear` and `NonLinear` take an optional number to work on.
+
+## Sample results
+
+`RecursionExercises` gives these answers: factorial of 5 is 120, the 10th Fibonacci number is 55, the sum of 1, 2, 3, 4 is 10, and "abc" reversed is "cba".
